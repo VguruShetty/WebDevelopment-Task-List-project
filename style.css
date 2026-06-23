@@ -1,5 +1,140 @@
 *{
-  margin:0px;
-  padding:0px;
-  align-item:center;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin:0;
+  padding:0;
+}
+body{
+  background-color: #2260FF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 40px 0;
+}
+.task-card{
+  background-color: #ffffff;
+  width: 40%;
+  min-width: 450px;
+  max-height: 600px;
+  border-radius: 8px;
+  padding: 40px;
+  box-shadow: 0 10px 25px rgb(0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+.task-card::-webkit-scrollbar 
+{
+  width: 8px;
+}
+.task-card::-webkit-scrollbar-track {
+  background: #BAE6FF; 
+  border-radius: 0 8px 8px 0;
+}
+.task-card::-webkit-scrollbar-thumb {
+  background: #33B1FF; 
+  border-radius: 4px;
+}
+.task-title
+{
+  color: #2260FF;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 60px;
+}
+.input-group {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+/* Task Input (Spec: 75% Width) */
+.task-input {
+  width: 75%;
+  padding: 12px 16px;
+  border: 2px solid #33B1FF;
+  border-radius: 6px;
+  font-size: 1rem;
+  outline: none;
+  color: #333;
+}
+
+.task-input::placeholder {
+  color: #a0aec0;
+}
+
+/* Add Button (Spec: 20px margin-left from input) */
+.btn-add {
+  flex-1: 1;
+  width: calc(25% - 20px);
+  margin-left: 20px;
+  background-color: #2260FF;
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-add:hover {
+  background-color: #1a4fd4;
+}
+
+/* Task List Container */
+.task-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Task Item (Spec: 50px vertical spacing between items, 20px left margin) */
+.task-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 20px;
+}
+
+.task-item:not(:last-child) {
+  margin-bottom: 50px;
+}
+
+.task-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.task-checkbox {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: #2260FF;
+}
+
+.task-text {
+  font-size: 1.05rem;
+  color: #2d3748;
+}
+
+/* Delete Button */
+.btn-delete {
+  background: none;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 6px 10px;
+  cursor: pointer;
+  color: #718096;
+  transition: all 0.2s;
+}
+
+.btn-delete:hover {
+  background-color: #fff5f5;
+  color: #e53e3e;
+  border-color: #fed7d7;
 }

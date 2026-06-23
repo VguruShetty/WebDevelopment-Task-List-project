@@ -1,11 +1,29 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
   <head>
-    <title>Web Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task List</title>
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <div>Hello box</div>
-    <div></div>
+    <div class="task-card">
+      <h1 class="task-title">Task List</h1>
+      <div class="input-group">
+        <input type="text" class="task-input" placeholder="Add a task">
+        <button class="btn-add">Add</button>
+      </div>  
+      
+      <ul class="task-list">
+        <li class="task-item">
+          <div class="task-left">
+            <input type="checkbox" class="task-checkbox">
+            <span class="task-text">Submit an expense report</span>
+          </div>
+          <button class="btn-delete">🗑</button>
+        </li>
+      </ul>
+    </div>
   </body>
+  <script src="script.js"></script>
 </html>
