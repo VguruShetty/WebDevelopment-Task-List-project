@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const taskInput = document.getElementById('taskInput');
     const addBtn = document.getElementById('addBtn');
-    const searchInput = document.getElementById('searchInput');
     const taskList = document.getElementById('taskList');
 
     // --- 1. FUNCTION: Add a New Task ---
@@ -25,12 +24,24 @@ document.addEventListener('DOMContentLoaded', () => {
         taskList.appendChild(li);
         taskInput.value = '';
 
-        // Run search filter in case user adds a task while filtering
-        filterTasks();
+        // Commented out because the function doesn't exist yet
+        // filterTasks(); 
     }
+    taskList.addEventListener('click', (e)=>{
+        if(e.target.classList.contains('btn-delete')){
+            const deleteButton = e.target.closest('.task-item');
+            if(deleteButton){
+                const taskItem = deleteButton.closest('.task-item');
+                if(taskItem){
+                    taskItem.remove();
+                }
+            }            
+        }
+    });
 
     // Event listeners for adding a task
     addBtn.addEventListener('click', addTask);
     taskInput.addEventListener('keypress', (e) => {
         if (e.key === 'Enter') addTask();
     });
+});
