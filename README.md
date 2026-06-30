@@ -20,6 +20,7 @@ The main dashboard gives you a clear overview of everything on your plate.
 ### 2. Adding a Task
 Type your task into the input field and click the **Add** button to instantly update your list.
 
+
 <img width="1245" height="568" alt="Add a Task Screen" src="https://github.com/user-attachments/assets/9cf05dfe-5c42-475e-b19c-19b445e49a07" />
 
 ### 3. Removing a Task
